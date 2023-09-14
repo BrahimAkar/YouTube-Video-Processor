@@ -42,5 +42,13 @@ You can use the following `curl` command as an example to send a request:
 ### Step 5: Monitoring and Managing the Queue
 Manage and monitor the message queues by accessing the RabbitMQ management interface at \`http://localhost:15672\` ( Default user and password are "guest").
 
+## Contribution 🤝
+Feel free to fork the project, create a feature branch, and send me a pull request.
+
+## License 📄
+This project is licensed under the MIT License.
+
+## Contact 📧
+For more information, feel free to contact me.
 
 
