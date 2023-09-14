@@ -36,6 +36,7 @@ Scale the project and increase the processing by initiating more Celery worker i
 ### Step 4: Sending API Requests
 Once the application is running, you can send POST requests to the endpoint `http://localhost:5000/process_video` to initiate the video processing task.
 You can use the following `curl` command as an example to send a request:
+
 ```curl -X POST -H "Content-Type: application/json" -d '{"video_url": "https://www.youtube.com/watch?v=RQBqBTUY9Hw","preferred_resolution":"720p"}' http://localhost:5000/process_video```
 
 
