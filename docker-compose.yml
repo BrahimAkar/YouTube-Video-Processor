@@ -9,6 +9,7 @@ services:
     environment:
       - CELERY_BROKER_URL=pyamqp://guest@rabbitmq// 
       - CELERY_RESULT_BACKEND=redis://redis
+    restart: unless-stopped
       
   celery:
     build: .
@@ -17,13 +18,15 @@ services:
       - .:/app
     depends_on:
       - web
+    restart: unless-stopped
       
   rabbitmq:
-    image: "rabbitmq"
+    image: "rabbitmq:3.8-management-alpine"
     ports:
       - "15672:15672"
       - "5672:5672"
-      
+    restart: unless-stopped
+
   redis:
     image: "redis"
     ports:
