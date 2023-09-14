@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json" -d '{"video_url": "https://www.youtube.com/watch?v=RQBqBTUY9Hw","preferred_resolution":"720p"}' http://localhost:5000/process_video

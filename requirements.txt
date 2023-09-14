@@ -1,0 +1,7 @@
+flask
+celery
+pytube
+cloudinary
+python-dotenv
+redis
+pymongo
