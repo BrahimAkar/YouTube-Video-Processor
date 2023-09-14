@@ -47,7 +47,7 @@ Manage and monitor the message queues by accessing the RabbitMQ management inter
 Feel free to fork the project, create a feature branch, and send me a pull request.
 
 ## License 📄
-This project is licensed under the MIT License.
+This project is licensed under the 0BSD License.
 
 ## Contact 📧
 For more information, feel free to contact me.
