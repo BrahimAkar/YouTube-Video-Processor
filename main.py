@@ -7,6 +7,7 @@ import os
 from threading import Thread
 logging.basicConfig(level=logging.INFO)
 from shared_resources import youtube_videos_collection
+from bson import ObjectId
 
 
 app = Flask(__name__)
@@ -14,6 +15,9 @@ app = Flask(__name__)
 app.config.update(
     CELERY_BROKER_URL=os.getenv("CELERY_BROKER_URL"),
 )
+
+
+
 
 
 @app.route('/process_video', methods=['POST'])
@@ -42,11 +46,29 @@ def watch_collection():
         for change in stream:
             if change['operationType'] == 'insert':
                 new_document = change['fullDocument']
+
                 video_url = new_document['video_url']
+                video_language = new_document['video_language']
+                video_country = new_document['video_country']
+                publisher_id = str(new_document['publisher_id'])
+                publisher_avatar = str(new_document['publisher_avatar'])
+                publisher_name = new_document['publisher_name']
+                publisher_topic = str(new_document['publisher_topic'])
+
                 public_id = new_document.get('public_id', 'videos')
                 preferred_resolution = new_document.get('preferred_resolution', '360p')
                 
-                async_download_and_upload_video.apply_async(args=[video_url, public_id, preferred_resolution])
+                async_download_and_upload_video.apply_async(args=[
+                    video_language,
+                    video_country,
+                    publisher_id,
+                    publisher_avatar,
+                    publisher_name,
+                    publisher_topic,
+                    video_url,
+                    public_id,
+                    preferred_resolution
+                    ])
 
 
 if __name__ == "__main__":
