@@ -14,6 +14,9 @@ services:
   celery:
     build: .
     command: python3 -m celery -A tasks.celery worker -l info
+    environment:
+      - CELERY_BROKER_URL=pyamqp://guest@rabbitmq// 
+      - CELERY_RESULT_BACKEND=redis://redis
     volumes:
       - .:/app
     depends_on:
