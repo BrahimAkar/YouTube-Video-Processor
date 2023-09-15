@@ -10,18 +10,22 @@ services:
       - CELERY_BROKER_URL=pyamqp://guest@rabbitmq// 
       - CELERY_RESULT_BACKEND=redis://redis
     restart: unless-stopped
+    env_file:
+      - .env
       
   celery:
     build: .
     command: python3 -m celery -A tasks.celery worker -l info
-    environment:
-      - CELERY_BROKER_URL=pyamqp://guest@rabbitmq// 
-      - CELERY_RESULT_BACKEND=redis://redis
     volumes:
       - .:/app
     depends_on:
       - web
     restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - CELERY_BROKER_URL=pyamqp://guest@rabbitmq// 
+      - CELERY_RESULT_BACKEND=redis://redis
       
   rabbitmq:
     image: "rabbitmq:3.8-management-alpine"
