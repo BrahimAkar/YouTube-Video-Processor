@@ -1,0 +1,66 @@
+[
+  {
+    "_id": {
+      "$oid": "6504842397eeee67f5d930c0"
+    },
+    "video_url": "https://www.youtube.com/watch?v=blS14EJX4A",
+    "video_language": "ar",
+    "video_country": null,
+    "publisher_id": {
+      "$oid": "63839d34767999195af6bb5d"
+    },
+    "publisher_avatar": "http://res.cloudinary.com/dhno0oksh/image/upload/v1692557043/postgoo_avatars_users/6293a0318baa5db29deb9cb3%20-%20avatar.jpg",
+    "publisher_name": "Brahim Akar",
+    "publisher_topic": {
+      "$oid": "6478ca22e9b329759f3caffe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6504842397eeee67f5d930c1"
+    },
+    "video_url": "https://www.youtube.com/watch?v=Mld0ZZhrosc",
+    "video_language": "ar",
+    "video_country": null,
+    "publisher_id": {
+      "$oid": "63839d34767999195af6bb5d"
+    },
+    "publisher_avatar": "http://res.cloudinary.com/dhno0oksh/image/upload/v1692557043/postgoo_avatars_users/6293a0318baa5db29deb9cb3%20-%20avatar.jpg",
+    "publisher_name": "Brahim Akar",
+    "publisher_topic": {
+      "$oid": "6478ca22e9b329759f3caffe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6504842397eeee67f5d930c2"
+    },
+    "video_url": "https://www.youtube.com/watch?v=hLqf7frouGY",
+    "video_language": "ar",
+    "video_country": null,
+    "publisher_id": {
+      "$oid": "63839d34767999195af6bb5d"
+    },
+    "publisher_avatar": "http://res.cloudinary.com/dhno0oksh/image/upload/v1692557043/postgoo_avatars_users/6293a0318baa5db29deb9cb3%20-%20avatar.jpg",
+    "publisher_name": "Brahim Akar",
+    "publisher_topic": {
+      "$oid": "6478ca22e9b329759f3caffe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6504842397eeee67f5d930c3"
+    },
+    "video_url": "https://www.youtube.com/watch?v=R1dS-J1whmI",
+    "video_language": "ar",
+    "video_country": null,
+    "publisher_id": {
+      "$oid": "63839d34767999195af6bb5d"
+    },
+    "publisher_avatar": "http://res.cloudinary.com/dhno0oksh/image/upload/v1692557043/postgoo_avatars_users/6293a0318baa5db29deb9cb3%20-%20avatar.jpg",
+    "publisher_name": "Brahim Akar",
+    "publisher_topic": {
+      "$oid": "6478ca22e9b329759f3caffe"
+    }
+  }
+]
