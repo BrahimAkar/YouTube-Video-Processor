@@ -14,6 +14,9 @@ app = Flask(__name__)
 
 app.config.update(
     CELERY_BROKER_URL=os.getenv("CELERY_BROKER_URL"),
+    task_time_limit=3600,  # hard time limit, 1 hour (3600 seconds)
+    task_soft_time_limit=3000,  # soft time, limit to 50 minutes (3000 seconds)
+
 )
 
 
