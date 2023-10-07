@@ -14,7 +14,12 @@ import cloudinary
 import subprocess
 from dotenv import load_dotenv
 load_dotenv()
-config = cloudinary.config(secure=True)
+
+config = cloudinary.config(
+    cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
+    api_key=os.getenv("CLOUDINARY_API_KEY"),
+    api_secret=os.getenv("CLOUDINARY_API_SECRET"),
+    secure=True)
 
 
 celery = Celery('tasks', broker=os.getenv("CELERY_BROKER_URL"))
@@ -106,7 +111,7 @@ def upload_video(path: str, public_id: str) -> str:
     """Upload the video to Cloudinary and return the video URL."""
     try:
         public_id = f"videos/{uuid.uuid4()}"
-        
+
         logging.info(f"Uploading: {path}, With public id of: {public_id} ")
 
         response = uploader.upload(
